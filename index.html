@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>networking Reviewer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .layer-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .layer-box h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Computer Networks Reviewer</h1>
+        <p>A comprehensive guide to computer networking concepts</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#osi-model">OSI Model</a></li>
+            <li><a href="#ip-addressing">IP Addressing</a></li>
+            <li><a href="#network-types">Network Types</a></li>
+            <li><a href="acro.html">Acronyms</a></li>
+        </ul>
+    </nav>
+    
+    <section id="introduction">
+        <h2>Introduction to Communications and Networks</h2>
+        <p>Communication is a process that involves sending and receiving messages through verbal and non-verbal methods. Data communication examines how data, in the form of energy, travels across some medium from a source to a destination.</p>
+        
+        <h3>A Simplified Communications Model</h3>
+        <ul>
+            <li><strong>Source:</strong> Generates data to be transmitted</li>
+            <li><strong>Transmitter:</strong> Converts data into transmittable signals</li>
+            <li><strong>Transmission System:</strong> Carries data</li>
+            <li><strong>Receiver:</strong> Converts received signal into data</li>
+            <li><strong>Destination:</strong> Takes incoming data</li>
+        </ul>
+        
+        <h3>Brief History of Communications</h3>
+        <ul>
+            <li><strong>1837:</strong> Samuel Morse invented the telegraph with Morse code</li>
+            <li><strong>1876:</strong> Alexander Graham Bell invented the telephone</li>
+            <li><strong>1945:</strong> ENIAC was invented as the first electronic computer</li>
+            <li><strong>1980s:</strong> Personal Computers became a new way of computing</li>
+            <li><strong>1990s:</strong> Emergence of the Internet and World Wide Web applications</li>
+        </ul>
+        
+        <h3>Communication Devices</h3>
+        <p>A communication device is hardware capable of transmitting analog or digital signals over telephone, communication wire, or wireless.</p>
+        <ul>
+            <li>Bluetooth Devices</li>
+            <li>Infrared Devices</li>
+            <li>Modem (Modulator-Demodulator)</li>
+            <li>Network Card or NIC (Network Interface Card)</li>
+            <li>Smart Phone</li>
+            <li>Wi-Fi Devices</li>
+        </ul>
+        
+        <h3>What are transmitted via Communication Media?</h3>
+        <ul>
+            <li><strong>Voice:</strong> Encoded signals (telephone, FAX, video conferencing, cellular phones)</li>
+            <li><strong>Video:</strong> Encoded images (television, VCR, DVD)</li>
+            <li><strong>Data:</strong> Character streams (LAN, WAN, Internet)</li>
+        </ul>
+    </section>
+    
+    <section id="osi-model">
+        <h2>OSI Model (Open System Interconnection)</h2>
+        <p>The OSI Model was developed by the International Organization for Standardization (ISO 7498:1984). It consists of seven layers, each with a different but specific processing function. The OSI Model describes the flow of data in a network, from the lowest layer up to the layer containing the user's applications.</p>
+        
+        <div class="layer-box">
+            <h3>Layer 7: Application Layer</h3>
+            <p>Responsible for providing networking services to the user. Also known as the Desktop Layer. Identification of services is done using Port Numbers.</p>
+            <p><strong>Examples of Networking Services:</strong></p>
+            <ul>
+                <li><strong>HTTP (Port 80):</strong> Hypertext Transfer Protocol - allows users to communicate data on the World Wide Web</li>
+                <li><strong>FTP (Port 21):</strong> File Transfer Protocol - used for transferring files from a server to a client</li>
+                <li><strong>SMTP (Port 25):</strong> Simple Mail Transfer Protocol - used for sending email messages</li>
+                <li><strong>TELNET (Port 23):</strong> Teletype Network - provides virtual access to a computer</li>
+                <li><strong>TFTP (Port 69):</strong> Trivial File Transfer Protocol - used to transfer files over networks</li>
+            </ul>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 6: Presentation Layer</h3>
+            <p>Responsible for converting data into standard format. Examples: ASCII, EBCDIC, JPEG, MPEG, BMP, MIDI, WAV, MP3.</p>
+            <p><strong>Tasks:</strong></p>
+            <ul>
+                <li><strong>Encoding-Decoding:</strong> Converting characters into specialized format for efficient transmission</li>
+                <li><strong>Encryption-Decryption:</strong> Encoding plaintext into ciphertext using algorithms and keys</li>
+                <li><strong>Compression-Decompression:</strong> Reducing file size for storage or transmission</li>
+            </ul>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 5: Session Layer</h3>
+            <p>Responsible for establishing, maintaining, and terminating sessions. Session ID works at this layer.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li><strong>RPC (Remote Procedure Call):</strong> Protocol for high-level communications in operating systems</li>
+                <li><strong>SQL (Structured Query Language):</strong> Used to communicate with databases</li>
+                <li><strong>NFS (Network File System):</strong> Protocol for distributed file sharing</li>
+            </ul>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 4: Transport Layer</h3>
+            <p>Responsible for end-to-end connectivity. Also known as the heart of OSI Layers.</p>
+            <p><strong>Tasks:</strong></p>
+            <ul>
+                <li><strong>Identifying Service:</strong> Using protocols like TCP (connection-oriented) and UDP (connectionless)</li>
+                <li><strong>Multiplexing & De-multiplexing:</strong> Transmitting data from different applications simultaneously</li>
+                <li><strong>Segmentation:</strong> Dividing messages into segments</li>
+                <li><strong>Sequencing & Reassembling:</strong> Ordering segments and reconstructing the original message</li>
+                <li><strong>Error Correction:</strong> Detecting and fixing transmission errors</li>
+                <li><strong>Flow Control:</strong> Managing data transmission rates between nodes</li>
+            </ul>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 3: Network Layer</h3>
+            <p>Responsible for providing the best path for data to reach the destination. Logical Addressing works on this layer. Router is a Network Layer device.</p>
+            <p><strong>Divided into two parts:</strong></p>
+            <ul>
+                <li><strong>Routed Protocols:</strong> IP, IPX, Apple Talk</li>
+                <li><strong>Routing Protocols:</strong> RIP, IGRP, OSPF, EIGRP</li>
+            </ul>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 2: Data Link Layer</h3>
+            <p>Divided into two sub-layers:</p>
+            <ul>
+                <li><strong>LLC (Logical Link Control):</strong> Talks about WAN Protocols (PPP, HDLC, Frame-Relay)</li>
+                <li><strong>MAC (Media Access Control):</strong> Talks about Physical Address (48-bit address, 12-digit Hexadecimal Number)</li>
+            </ul>
+            <p>Also responsible for Error Detection (CRC Check). Devices: Switch, Bridge, and NIC.</p>
+        </div>
+        
+        <div class="layer-box">
+            <h3>Layer 1: Physical Layer</h3>
+            <p>Responsible for electrical, mechanical, and procedural checks. Data is converted into Binary 0's and 1's.</p>
+            <p><strong>Data forms:</strong></p>
+            <ul>
+                <li><strong>Electrical Pulses:</strong> Coaxial or Twisted Pair Cable</li>
+                <li><strong>Light:</strong> Fiber Optic Cable</li>
+            </ul>
+            <p><strong>Devices:</strong> Hubs, Repeaters, Cables, Modems, and others.</p>
+        </div>
+    </section>
+    
+    <section id="ip-addressing">
+        <h2>IP Addressing</h2>
+        <p>IP Addressing is Logical Addressing that works on Network Layer (Layer 3). There are two versions of addressing schemes:</p>
+        <ul>
+            <li><strong>IP Version 4:</strong> 32-bit addressing</li>
+            <li><strong>IP Version 6:</strong> 128-bit addressing</li>
+        </ul>
+        
+        <h3>IP Version 4 (IPv4)</h3>
+        <p>32 bits are divided into 4 octets known as Dotted Decimal Notation. Each octet represents 8 bits (values from 0 to 255).</p>
+        
+        <h3>IP Version 6 (IPv6)</h3>
+        <p>128-bit address is divided along 16-bit boundaries, and each 16-bit block is converted to a 4-digit hexadecimal number and separated by colons (Colon-Hex Notation).</p>
+        <p>Example: ABCD:34AC:1234:FEAB:AB89:4567:3245:7896</p>
+        
+        <h3>IP Address Classes</h3>
+        <table>
+            <tr>
+                <th>Class</th>
+                <th>First Octet Range</th>
+                <th>Format</th>
+                <th>Default Subnet Mask</th>
+                <th>Networks</th>
+                <th>Hosts per Network</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>1-126</td>
+                <td>N.H.H.H</td>
+                <td>255.0.0.0</td>
+                <td>126</td>
+                <td>16,777,214</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>128-191</td>
+                <td>N.N.H.H</td>
+                <td>255.255.0.0</td>
+                <td>16,382</td>
+                <td>65,534</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>192-223</td>
+                <td>N.N.N.H</td>
+                <td>255.255.255.0</td>
+                <td>2,097,150</td>
+                <td>254</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>224-239</td>
+                <td>Multicast</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>240-255</td>
+                <td>Reserved</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        
+        <h3>Private IP Addresses</h3>
+        <p>Addresses reserved for LANs that are not connected to the Internet:</p>
+        <ul>
+            <li><strong>Class A:</strong> 10.0.0.0 to 10.255.255.255</li>
+            <li><strong>Class B:</strong> 172.16.0.0 to 172.31.255.255</li>
+            <li><strong>Class C:</strong> 192.168.0.0 to 192.168.255.255</li>
+        </ul>
+        
+        <h3>Subnet Mask</h3>
+        <p>Subnet Mask differentiates Network portion and Host portion. It is represented with all 1's in the network portion and all 0's in the host portion.</p>
+        <ul>
+            <li><strong>Class A:</strong> 255.0.0.0</li>
+            <li><strong>Class B:</strong> 255.255.0.0</li>
+            <li><strong>Class C:</strong> 255.255.255.0</li>
+        </ul>
+        
+        <h3>Subnetting</h3>
+        <p>Subnetting is dividing a single network into multiple networks by converting host bits to network bits. It can be done based on:</p>
+        <ol>
+            <li>Requirement of Networks</li>
+            <li>Requirement of Hosts</li>
+            <li>CISCO / Notation</li>
+        </ol>
+    </section>
+    
+    <section id="network-types">
+        <h2>Network Types and Topologies</h2>
+        
+        <h3>Types of Networks</h3>
+        <ul>
+            <li><strong>Local Area Network (LAN):</strong> Connects a relatively small number of machines in a close geographical area</li>
+            <li><strong>Wide Area Network (WAN):</strong> Connects LANs over potentially large geographic distances</li>
+            <li><strong>Metropolitan Area Network (MAN):</strong> Communication infrastructures developed in and around large cities</li>
+        </ul>
+        
+        <h3>Network Topologies</h3>
+        <ul>
+            <li><strong>Bus Topology:</strong> Nodes are connected to a single communication line that carries messages in both directions</li>
+            <li><strong>Star Topology:</strong> Centers around one node to which all others are connected and through which all messages are sent</li>
+            <li><strong>Ring Topology:</strong> Connects all nodes in a closed loop in which messages travel in one direction</li>
+            <li><strong>Fully Connected Topology:</strong> A direct path exists between any two nodes</li>
+            <li><strong>Hybrid Topology:</strong> Uses two or more different network topologies</li>
+        </ul>
+        
+        <h3>Communication Software</h3>
+        <p>Communication software is an application or program designed to pass information from one system to another. It includes systems and applications that enable the exchange of text, audio, video messages, and files via the cloud or local networks.</p>
+        <p>Tools such as email, chat, messaging apps, FTP systems, and VoIP platforms help users communicate across devices in real-time.</p>
+        
+        <h3>Protocols</h3>
+        <p>A protocol is a set of rules or procedures for transmitting data between electronic devices. There are three main types:</p>
+        <ul>
+            <li><strong>Network Management Protocols</strong></li>
+            <li><strong>Network Communication Protocols</strong></li>
+            <li><strong>Network Security Protocols</strong></li>
+        </ul>
+        <p>Communication protocols include basic data communication tools like TCP/IP and HTTP.</p>
+    </section>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="acro.html" class="btn">View All Acronyms</a>
+    </div>
+    
+    <footer>
+        <p>&copy; Networking Reviewer | Created for Aimy's Enchantress Group (2025)</p>
+    </footer>
+</body>
+</html>
